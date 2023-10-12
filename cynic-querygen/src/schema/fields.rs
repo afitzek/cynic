@@ -220,8 +220,8 @@ fn input_type_spec_imp(
                     Cow::Borrowed("&'a cynic::Id")
                 }
                 ("String", false) => {
-                    contains_lifetime_a = true;
-                    Cow::Borrowed("&'a str")
+                    contains_lifetime_a = false;
+                    Cow::Borrowed("String")
                 }
                 _ => Cow::Owned({
                     let mut type_ = s.type_name.to_pascal_case();
